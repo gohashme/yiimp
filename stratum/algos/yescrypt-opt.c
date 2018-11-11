@@ -945,7 +945,15 @@ yescrypt_kdf(const yescrypt_shared_t * shared, yescrypt_local_t * local,
 			if (r == 32)	{ // yescryptR32
 				HMAC_SHA256_Update_Y(&ctx, "WaviBanana", 10);
 			} else
+			if (r == 24)	{ // yescryptR24
+				HMAC_SHA256_Update_Y(&ctx, "Jagaricoin", 10);
+			}
+			else
 			if (r == 16)	{ // yescryptR16
+				HMAC_SHA256_Update_Y(&ctx, "Client Key", 10);
+			}
+			else
+			if (r == 8)	{ // yescryptR8
 				HMAC_SHA256_Update_Y(&ctx, "Client Key", 10);
 			}
 			else	{ // yescrypt
