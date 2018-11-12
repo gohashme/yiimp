@@ -28,13 +28,10 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <!--  -->
 
 <div class="main-left-box">
-<div class="main-left-title">YII MINING POOLS</div>
+<div class="main-left-title">GoHashMe</div>
 <div class="main-left-inner">
 
 <ul>
-
-<li>YiiMP is a pool management solution based on the Yii Framework.</li>
-<li>This fork was based on the yaamp source code and is now an open source project.</li>
 <li>No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</li>
 <li>&nbsp;</li>
 <li>Payouts are made automatically every <?= $payout_freq ?> for all balances above <b><?= $min_payout ?></b>, or <b><?= $min_sunday ?></b> on Sunday.</li>
@@ -50,7 +47,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <!--  -->
 
 <div class="main-left-box">
-<div class="main-left-title">STRATUM SERVERS</div>
+<div class="main-left-title">Stratum Server</div>
 <div class="main-left-inner">
 
 <ul>
@@ -76,7 +73,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <!--  -->
 
 <div class="main-left-box">
-<div class="main-left-title">LINKS</div>
+<div class="main-left-title">Links</div>
 <div class="main-left-inner">
 
 <ul>
@@ -94,16 +91,15 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <li><b>Algo Switching</b> - <a href='/site/multialgo'>http://<?= YAAMP_SITE_URL ?>/site/multialgo</a></li>
 <?php endif; ?>
 
+<li><b>DISCORD</b> - <a href="https://discord.gg/ujxFecR" target="_blank">https://discord.gg/ujxFecR</a></li>
+
 <br>
 
 </ul>
 </div></div><br>
 
 <!--  -->
-
-<a class="twitter-timeline" href="https://twitter.com/hashtag/YAAMP" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #YAAMP</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+<a class="twitter-timeline" href="https://twitter.com/gohashme?ref_src=twsrc%5Etfw"</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </td><td valign=top>
 
 <!--  -->

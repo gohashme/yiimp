@@ -15,8 +15,8 @@ echo <<<END
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<meta name="description" content="Yii mining pools for alternative crypto currencies">
-<meta name="keywords" content="anonymous,mining,pool,maxcoin,bitcoin,altcoin,auto,switch,exchange,profit,decred,scrypt,x11,x13,x14,x15,lbry,lyra2re,neoscrypt,sha256,quark,skein2">
+<meta name="description" content="GoHashMe mining pools for alternative crypto currencies">
+<meta name="keywords" content="gohashme,weycoin,anonymous,mining,pool,maxcoin,bitcoin,altcoin,auto,switch,exchange,profit,decred,scrypt,x11,x13,x14,x15,lbry,lyra2re,neoscrypt,sha256,quark,skein2">
 
 END;
 
@@ -37,21 +37,16 @@ $cs->registerCoreScript('jquery.ui');
 
 echo CHtml::scriptFile('/yaamp/ui/js/jquery.tablesorter.js');
 
-// if(!controller()->admin)
-// echo <<<end
-// <script>
-// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+echo <<<end
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71796222-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-// ga('create', 'UA-58136019-1', 'auto');
-// ga('send', 'pageview');
-
-// $(document).ajaxSuccess(function(){ga('send', 'pageview');});
-
-// </script>
-// end;
+  gtag('config', 'UA-71796222-4');
+</script>
+end;
 
 echo "</head>";
 
@@ -141,7 +136,7 @@ function showPageFooter()
 	$year = date("Y", time());
 
 	echo "<p>&copy; $year ".YAAMP_SITE_NAME.' - '.
-		'<a href="http://github.com/tpruvot/yiimp">Open source Project</a></p>';
+		'<a href="https://github.com/gohashme/yiimp">Open source Project</a></p>';
 
 	echo '</div><!-- footer -->';
 }
