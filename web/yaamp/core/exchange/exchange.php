@@ -136,6 +136,8 @@ function getMarketUrl($coin, $marketName)
 		$url = "https://tradesatoshi.com/Exchange?market={$symbol}_{$base}";
 	else if($market == 'yobit')
 		$url = "https://yobit.net/en/trade/{$symbol}/{$base}";
+	else if($market == 'tradeogre')
+		$url = "https://tradeogre.com/exchange/{$base}-{$symbol}";
 	else
 		$url = "";
 

@@ -1,5 +1,5 @@
 <?php
- //https://tradeogre.com/api/v1/markets
+//https://tradeogre.com/api/v1/markets
 function tradeogre_api_query($method, $params='')
 {
 	$uri = "https://tradeogre.com/api/v1/{$method}";
@@ -13,7 +13,8 @@ function tradeogre_api_query($method, $params='')
  	$obj = json_decode($execResult, true);
  	return $obj;
 }
- function tradeogre_api_query_get($method, $req = array())
+
+function tradeogre_api_query_get($method, $req = array())
 {
 	$uri="https://tradeogre.com/api/v1/$method?" . http_build_query($req,'','&');
 	echo $uri;
@@ -31,7 +32,8 @@ function tradeogre_api_query($method, $params='')
      #print_r ($resData);
      return $resData;
 }
- function tradeogre_api_query_post($method, $req = array())
+
+function tradeogre_api_query_post($method, $req = array())
 {
 	$uri = "https://tradeogre.com/api/v1/{$method}";
  	$postData = http_build_query($req,'','&');
@@ -52,4 +54,4 @@ function tradeogre_api_query($method, $params='')
      $execResult = curl_exec($ch);
     $resData = json_decode($execResult);
      return $resData;
-} 
+}
