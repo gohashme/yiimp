@@ -165,6 +165,10 @@ function runExchange($exchangeName=false)
 				doPoloniexTrading(true);
 				updatePoloniexMarkets();
 				break;
+			
+			case 'tradeogre':
+				updateTradeOgreMarkets();
+				break;
 
 			default:
 				debuglog(__FUNCTION__.' '.$exchangeName.' not implemented');

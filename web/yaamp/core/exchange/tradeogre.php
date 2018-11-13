@@ -16,6 +16,9 @@ function tradeogre_api_query($method, $params='')
 
 function tradeogre_api_query_get($method, $req = array())
 {
+    require_once('/etc/yiimp/keys.php');
+    if (!defined('EXCH_TRADEOGRE_SECRET')) return false;
+    
 	$uri="https://tradeogre.com/api/v1/$method?" . http_build_query($req,'','&');
 	echo $uri;
 	$ch = curl_init($uri);
@@ -35,6 +38,9 @@ function tradeogre_api_query_get($method, $req = array())
 
 function tradeogre_api_query_post($method, $req = array())
 {
+    require_once('/etc/yiimp/keys.php');
+    if (!defined('EXCH_TRADEOGRE_SECRET')) return false;
+    
 	$uri = "https://tradeogre.com/api/v1/{$method}";
  	$postData = http_build_query($req,'','&');
 	print_r ($postData);
@@ -54,4 +60,24 @@ function tradeogre_api_query_post($method, $req = array())
      $execResult = curl_exec($ch);
     $resData = json_decode($execResult);
      return $resData;
+}
+
+function getTradeogreBalances()
+{
+    debuglog(__FUNCTION__);
+
+	$exchange = 'tradeogre';
+	if (exchange_get($exchange, 'disabled')) return;
+
+	$savebalance = getdbosql('db_balances', "name='$exchange'");
+	if (is_object($savebalance)) {
+		$balances = tradeogre_api_query_get('account/balances');
+		if (is_array($balances)) {
+            debuglog($balances);
+
+			// $savebalance->balance = arraySafeVal($balances, 'btc_balance',0.) - arraySafeVal($balances, 'btc_reserved');
+			// $savebalance->onsell = arraySafeVal($balances, 'btc_reserved');
+			// $savebalance->save();
+		}
+	}
 }
